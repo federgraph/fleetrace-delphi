@@ -1,0 +1,257 @@
+object FormWatches: TFormWatches
+  Left = 177
+  Top = 186
+  BorderStyle = bsDialog
+  Caption = 'FR Watches'
+  ClientHeight = 179
+  ClientWidth = 479
+  Color = clWindow
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poDesigned
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 100
+    Top = 8
+    Width = 6
+    Height = 13
+    Alignment = taRightJustify
+    BiDiMode = bdLeftToRight
+    Caption = '1'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object ed1: TLabel
+    Left = 128
+    Top = 8
+    Width = 6
+    Height = 13
+    BiDiMode = bdLeftToRight
+    Caption = '1'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentBiDiMode = False
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 100
+    Top = 24
+    Width = 6
+    Height = 13
+    Alignment = taRightJustify
+    BiDiMode = bdLeftToRight
+    Caption = '2'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object ed2: TLabel
+    Left = 128
+    Top = 24
+    Width = 6
+    Height = 13
+    BiDiMode = bdLeftToRight
+    Caption = '2'
+    Color = clSkyBlue
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object ed3: TLabel
+    Left = 128
+    Top = 40
+    Width = 6
+    Height = 13
+    BiDiMode = bdLeftToRight
+    Caption = '3'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 99
+    Top = 40
+    Width = 6
+    Height = 13
+    Alignment = taRightJustify
+    BiDiMode = bdLeftToRight
+    Caption = '3'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 98
+    Top = 56
+    Width = 6
+    Height = 13
+    Alignment = taRightJustify
+    BiDiMode = bdLeftToRight
+    Caption = '4'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object ed4: TLabel
+    Left = 128
+    Top = 56
+    Width = 6
+    Height = 13
+    BiDiMode = bdLeftToRight
+    Caption = '4'
+    Color = clSkyBlue
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 98
+    Top = 72
+    Width = 6
+    Height = 13
+    Alignment = taRightJustify
+    BiDiMode = bdLeftToRight
+    Caption = '5'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object ed5: TLabel
+    Left = 128
+    Top = 72
+    Width = 6
+    Height = 13
+    BiDiMode = bdLeftToRight
+    Caption = '5'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object ed6: TLabel
+    Left = 128
+    Top = 88
+    Width = 6
+    Height = 13
+    BiDiMode = bdLeftToRight
+    Caption = '6'
+    Color = clSkyBlue
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 98
+    Top = 88
+    Width = 6
+    Height = 13
+    Alignment = taRightJustify
+    BiDiMode = bdLeftToRight
+    Caption = '6'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 98
+    Top = 104
+    Width = 6
+    Height = 13
+    Alignment = taRightJustify
+    BiDiMode = bdLeftToRight
+    Caption = '7'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object ed7: TLabel
+    Left = 128
+    Top = 104
+    Width = 6
+    Height = 13
+    BiDiMode = bdLeftToRight
+    Caption = '7'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 98
+    Top = 120
+    Width = 6
+    Height = 13
+    Alignment = taRightJustify
+    BiDiMode = bdLeftToRight
+    Caption = '8'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object ed8: TLabel
+    Left = 128
+    Top = 120
+    Width = 6
+    Height = 13
+    BiDiMode = bdLeftToRight
+    Caption = '8'
+    Color = clSkyBlue
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object ed9: TLabel
+    Left = 128
+    Top = 136
+    Width = 6
+    Height = 13
+    BiDiMode = bdLeftToRight
+    Caption = '9'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 98
+    Top = 136
+    Width = 6
+    Height = 13
+    Alignment = taRightJustify
+    BiDiMode = bdLeftToRight
+    Caption = '9'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object Label10: TLabel
+    Left = 92
+    Top = 152
+    Width = 12
+    Height = 13
+    Alignment = taRightJustify
+    BiDiMode = bdLeftToRight
+    Caption = '10'
+    Color = clBtnFace
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+  object ed10: TLabel
+    Left = 128
+    Top = 152
+    Width = 12
+    Height = 13
+    BiDiMode = bdLeftToRight
+    Caption = '10'
+    Color = clSkyBlue
+    ParentBiDiMode = False
+    ParentColor = False
+  end
+end
