@@ -12,7 +12,7 @@ The source code is for Delphi 10.2 (Tokyo) !
 
 - I am using Community Edition.
 - I am not using any third party components.
-- It should work with Delhi 10.3 (Rio).
+- It should work with Delphi 10.3 (Rio).
 
 #### First action after opening a project for the first time
 
@@ -22,9 +22,9 @@ Please go to project options and restore the output directories for exe and dcu 
 .\$(Platform)\$(Config)
 ```
 
-I have put the .dproj into gitignore, Delphi will recreate it locally from the dpr.
-
-(But it does not restore the original new-project-default for the output dirs.)
+I have put the .dproj into gitignore.
+Delphi will recreate it locally from the dpr,
+But it does not restore the original new-project-default for the output dirs.
 
 #### About res files
 
