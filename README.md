@@ -16,7 +16,7 @@ The source code is for Delphi 10.2 (Tokyo) !
 
 #### First action after opening a project for the first time
 
-Please go to project options and restore the output directories for exe and dcu to be the original default for a new project:
+Please go to project options and restore the output directories for exe and dcus to be the original default for a new project:
 
 ```
 .\$(Platform)\$(Config)
@@ -24,7 +24,7 @@ Please go to project options and restore the output directories for exe and dcu 
 
 I have put the .dproj into gitignore.
 Delphi will recreate it locally from the dpr,
-But it does not restore the original new-project-default for the output dirs.
+but it does not restore the original-new-project-default value for the output dirs.
 
 #### About res files
 
