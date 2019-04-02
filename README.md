@@ -8,22 +8,23 @@ FR69 is the first application I am going to upload, more will follow.
 
 ## How to build
 
-The sourced code is for Delphi 10.2 (Tokyo) !
+The source code is for Delphi 10.2 (Tokyo) !
 
 - I am using Community Edition.
 - I am not using any third party components.
 - It should work with Delhi 10.3 (Rio).
 
-#### First action after opening project for the first time
+#### First action after opening a project for the first time
 
-Please go to project options and restore the output dir for exe and dcu to be the original default for a new project:
+Please go to project options and restore the output directories for exe and dcu to be the original default for a new project:
 
 ```
 .\$(Platform)\$(Config)
 ```
 
 I have put the .dproj into gitignore, Delphi will recreate it locally from the dpr.
-(But it does not restore the original new project default for the output dirs.)
+
+(But it does not restore the original new-project-default for the output dirs.)
 
 #### About res files
 
