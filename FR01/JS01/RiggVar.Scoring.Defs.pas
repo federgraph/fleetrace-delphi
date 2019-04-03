@@ -1,4 +1,4 @@
-unit RiggVar.Scoring.Defs;
+﻿unit RiggVar.Scoring.Defs;
 
 (*
 -     F

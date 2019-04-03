@@ -1,0 +1,34 @@
+FRXML20_xsl TEXT "stylesheets\FRXML20.xsl"
+
+rvtp_xsl TEXT "stylesheets\rvtp.xsl"
+
+core_js TEXT "javascripts\core.js"
+rvts_js TEXT "javascripts\rvts.js"
+
+rvtw03_js TEXT "javascripts\rvtw03.js"
+rvtw05_js TEXT "javascripts\rvtw05.js"
+rvtw08_js TEXT "javascripts\rvtw08.js"
+
+rvtw03_css TEXT "stylesheets\rvtw03.css"
+rvtw05_css TEXT "stylesheets\rvtw05.css"
+rvtw08_css TEXT "stylesheets\rvtw08.css"
+
+jquery_js TEXT "javascripts\jquery-1.3.2.min.js"
+site_css TEXT "stylesheets\Site.css"
+
+welcome WAVE "sound\welcome.wav"
+click01 WAVE "sound\click01.wav"
+click02 WAVE "sound\click02.wav"
+click03 WAVE "sound\click03.wav"
+recycle WAVE "sound\recycle.wav"
+
+msgflow_01_jpg JPEG "images\msgflow-01.jpg"
+msgflow_02_jpg JPEG "images\msgflow-02.jpg"
+
+bg_red_png PNG "images\bg\bg-red.png"
+bg_teal_png PNG "images\bg\bg-teal.png"
+bg_orange_png PNG "images\bg\bg-orange.png"
+bg_brown_png PNG "images\bg\bg-brown.png"
+
+style_css TEXT "styles\style.css"
+style_p_css TEXT "styles\style-p.css"

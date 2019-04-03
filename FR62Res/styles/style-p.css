@@ -1,0 +1,67 @@
+﻿body {
+    font-family: "Segoe UI Light", "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+    font-size: 0.8em;
+}
+/* layout */
+#container {
+    width: 800px;
+    margin: 0 auto;
+}
+#sidebar {
+    height:0px;
+    width: 0px;
+    display: none;
+}
+#header {
+    height:0px;
+    padding:0;
+    margin:0;
+    display:none;
+}
+#footer {
+    height:0px;
+    margin:0;
+    padding:0;
+    display:none;
+}
+#content {
+    float: left;
+    width: 650px;
+    padding: 15px;
+    overflow: auto;
+    margin: 0px;
+    position: relative;
+}
+/* content */
+#content h1 {
+    font-size: 16px;
+}
+#content h2 {
+    color:red;
+    font-size: 14px;
+}
+#content h3 {
+    font-size: 12px;
+}
+#content h4 {
+    color:blue;
+    font-size: 12px;
+}
+#content img {
+    display: block;
+}
+#content li {
+    color: black;
+}
+#content pre {
+    font-size: 14px;	
+}
+.style_bold {
+    font-weight: bold;
+}
+.style_italic {
+    font-style: italic;
+}
+.big-picture {
+    width:100%;
+}

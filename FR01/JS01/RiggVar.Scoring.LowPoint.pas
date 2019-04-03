@@ -1,23 +1,23 @@
 unit RiggVar.Scoring.LowPoint;
 
 (*
--     F
--    * * *
--   *   *   G
--  *     * *   *
-- E - - - H - - - I
--  *     * *         *
--   *   *   *           *
--    * *     *             *
--     D-------A---------------B
--              *
--              (C) federgraph.de
+-     F                           
+-    * * *                        
+-   *   *   G                     
+-  *     * *   *                  
+- E - - - H - - - I               
+-  *     * *         *            
+-   *   *   *           *         
+-    * *     *             *      
+-     D-------A---------------B   
+-              *                  
+-              (C) federgraph.de  
 *)
 
 interface
 
 uses
-  System.Classes,
+  System.Classes, 
   System.Math,
   RiggVar.Grid.ColBase,
   RiggVar.Scoring.Domain,

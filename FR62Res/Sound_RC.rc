@@ -1,0 +1,5 @@
+welcome WAVE "sound\welcome.wav"
+click01 WAVE "sound\click01.wav"
+click02 WAVE "sound\click02.wav"
+click03 WAVE "sound\click03.wav"
+recycle WAVE "sound\recycle.wav"
