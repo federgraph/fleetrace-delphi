@@ -16,7 +16,7 @@ The source code is for Delphi 10.2 (Tokyo) !
 
 #### Configure the output dirs
 
-This should be done immediatlely after opening a project for the first time!
+This should be done immediately after opening a project for the first time!
 
 Please go to project options and restore the output directories for exe and dcus to be the original default for a new project:
 
