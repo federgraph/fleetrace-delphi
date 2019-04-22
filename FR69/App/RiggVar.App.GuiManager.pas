@@ -1,4 +1,4 @@
-unit RiggVar.App.GuiManager;
+﻿unit RiggVar.App.GuiManager;
 
 (*
 -     F                           
@@ -238,6 +238,7 @@ begin
   SilverlightWeb := TSilverlightWeb.Create;
   SilverlightWeb.Path := '/silverlight';
   SilverlightWeb.HttpServer := HomeRouter;
+  SilverlightWeb.IsOffline := True;
 
   AngularWeb := TAngularWeb.Create;
   AngularWeb.Path := '/angular';

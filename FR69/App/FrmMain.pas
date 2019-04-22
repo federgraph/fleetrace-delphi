@@ -322,6 +322,7 @@ type
     procedure TestFormItemClick(Sender: TObject);
     procedure TestMessageParserItemClick(Sender: TObject);
     procedure EnableLogItemClick(Sender: TObject);
+    procedure PublishMenuClick(Sender: TObject);
   private
     FTestMemo: TStrings;
     FStatusMemo: TStrings;
@@ -2167,6 +2168,13 @@ begin
 //    if WantWeb and (TabWeb <> nil) then
 //      TabWeb.UpdateFormStatus;
   end;
+end;
+
+procedure TFormFR62.PublishMenuClick(Sender: TObject);
+begin
+  PublishHomeWebItem.Checked := GM.WebMotorHome.IsOnline;
+  PublishRemoteWebItem.Checked := GM.WebMotorRemote.IsOnline;
+  PublishSilverlightWebItem.Checked := GM.SilverlightWeb.IsOnline;
 end;
 
 procedure TFormFR62.PublishRemoteWebItemClick(Sender: TObject);

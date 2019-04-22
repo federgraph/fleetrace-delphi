@@ -212,7 +212,7 @@ begin
   //InitDebugSettings;
   PostModeBtn.Visible := False;
   DebugModeBtn.Enabled := Main.HaveAppPermission;
-  WriteBtn.Enabled := Main.HaveAppPermission;
+  WriteBtn.Enabled := False; //Main.HaveAppPermission;
   ReadBtn.Enabled := Main.HaveAppPermission;
 
   InitBtnText;

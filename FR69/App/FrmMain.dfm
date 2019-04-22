@@ -1,4 +1,4 @@
-object FormFR62: TFormFR62
+﻿object FormFR62: TFormFR62
   Left = 0
   Top = 77
   Caption = 'FR62'
@@ -547,6 +547,7 @@ object FormFR62: TFormFR62
     object PublishMenu: TMenuItem
       Caption = 'Publish'
       GroupIndex = 4
+      OnClick = PublishMenuClick
       object PublishAllItem: TMenuItem
         Caption = 'Workspace Reports'
         OnClick = PublishAllItemClick
