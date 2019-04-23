@@ -44,9 +44,8 @@ Include that style.
 I do not want to include the normal project-name.res file (see gitignore),
 so a new one will be recreated in your local repo when you compile.
 
-- I do include the other res files,
-- the resources for these will go into a separate directory
-- together with the bat file to compile the rc files.
+I do include the other res files.
+The resources for these will go into a separate directory together with the bat file to compile the rc files.
 
 
 
