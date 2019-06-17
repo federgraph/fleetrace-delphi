@@ -118,7 +118,7 @@ uses
   RiggVar.Web2.Page,
   RiggVar.Web4.EventMenuJson;
 
-{ TWebController }
+{ TWebRouter }
 
 constructor TWebRouter.Create;
 begin

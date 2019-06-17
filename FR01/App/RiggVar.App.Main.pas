@@ -197,7 +197,7 @@ begin
       FolderInfo := TFolderInfo.Create;
     end;
 
-    //need WorkspaceInfo to resolve resolve ConfigFileName in FolderInfo
+    //need WorkspaceInfo to resolve ConfigFileName in FolderInfo
     if not Assigned(IniImage) then
     begin
       StartupLogger.Add('Logging FolderInfo.ConfigFileName:');
