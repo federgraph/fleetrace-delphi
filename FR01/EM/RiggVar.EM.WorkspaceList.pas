@@ -1,17 +1,17 @@
 unit RiggVar.EM.WorkspaceList;
 
 (*
--     F                           
--    * * *                        
--   *   *   G                     
--  *     * *   *                  
-- E - - - H - - - I               
--  *     * *         *            
--   *   *   *           *         
--    * *     *             *      
--     D-------A---------------B   
--              *                  
--              (C) federgraph.de  
+-     F
+-    * * *
+-   *   *   G
+-  *     * *   *
+- E - - - H - - - I
+-  *     * *         *
+-   *   *   *           *
+-    * *     *             *
+-     D-------A---------------B
+-              *
+-              (C) federgraph.de
 *)
 
 interface
@@ -70,8 +70,8 @@ type
 implementation
 
 uses
-  Windows,
-  SHFolder,
+  Winapi.Windows,
+  Winapi.SHFolder,
   RiggVar.Util.AppUtils;
 
 const

@@ -1,17 +1,17 @@
 unit RiggVar.EM.WorkspaceListBase;
 
 (*
--     F                           
--    * * *                        
--   *   *   G                     
--  *     * *   *                  
-- E - - - H - - - I               
--  *     * *         *            
--   *   *   *           *         
--    * *     *             *      
--     D-------A---------------B   
--              *                  
--              (C) federgraph.de  
+-     F
+-    * * *
+-   *   *   G
+-  *     * *   *
+- E - - - H - - - I
+-  *     * *         *
+-   *   *   *           *
+-    * *     *             *
+-     D-------A---------------B
+-              *
+-              (C) federgraph.de
 *)
 
 interface
@@ -79,12 +79,21 @@ const
   u1 = 'Example: www.fleetrace.org/txt=http://www.fleetrace.org/EventMenu.txt';
   u2 = 'Example: data.riggvar.de/txt=http://data.riggvar.de/EventMenu.txt';
 
-  u3 = 'Example: data.riggvar.de/xml=http://data.riggvar.de/EventMenu.xml';
-  u4 = 'Example: www.riggvar.de/xml=http://www.riggvar.de/results/EventMenu.xml';
-  u5 = 'Example: www.fleetrace.org/demo=http://www.fleetrace.org/DemoIndex.xml';
-  u6 = 'Example: www.riggvar.de/html=http://www.riggvar.de/results/EventMenuHtml.xml';
+  //using jekyll locally
+  u3 = 'Example: localhost:4000/html=http://localhost:4000/html/EventMenu.xml';
+
+  //using jekyll at GitHub Pages
+  u4 = 'Example: github/xml=https://federgraph.github.io/fleetrace-example-data/xml/EventMenu.xml';
+  u5 = 'Example: github/html=https://federgraph.github.io/fleetrace-example-data/html/EventMenu.xml';
+  u6 = 'Example: github/txt=https://federgraph.github.io/fleetrace-example-data/text/EventMenu.txt';
+
   u7 = '* local workspace = D:\EventMenu\EventMenu.xml';
   u8 = '* local workspace = D:\EventMenu\EventMenuLocal.xml';
+
+  old_u3 = 'Example: data.riggvar.de/xml=http://data.riggvar.de/EventMenu.xml';
+  old_u4 = 'Example: www.riggvar.de/xml=http://www.riggvar.de/results/EventMenu.xml';
+  old_u5 = 'Example: www.fleetrace.org/demo=http://www.fleetrace.org/DemoIndex.xml';
+  old_u6 = 'Example: www.riggvar.de/html=http://www.riggvar.de/results/EventMenuHtml.xml';
 
 { TWorkspaceListBase }
 
@@ -112,18 +121,35 @@ end;
 
 procedure TWorkspaceListBase.LoadDefault;
 var
-  WantXML: boolean;
+  WantXML: Boolean;
+  WantNewUrls: Boolean;
 begin
   TL.Clear;
 
   WantXml := CheckWin32Version(5,1);
 
+  //Requires OpenSSL DLL's in output folder:
+  //for Win32 build: libea32.dll and ssleay32.dll
+  //from https://indy.fulgan.com/SSL/
+  WantNewUrls := False;
+
   if WantXml then
   begin
+    if WantNewUrls then
+    begin
     AddUrl(u3);
     AddUrl(u4);
     AddUrl(u5);
     AddUrl(u6);
+    end
+    else
+    begin
+      AddUrl(old_u3);
+      AddUrl(old_u4);
+      AddUrl(old_u5);
+      AddUrl(old_u6);
+    end;
+
     AddUrl(u7);
     AddUrl(u8);
   end

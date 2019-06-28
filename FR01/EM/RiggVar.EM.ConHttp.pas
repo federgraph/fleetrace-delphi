@@ -1,17 +1,17 @@
 unit RiggVar.EM.ConHttp;
 
 (*
--     F                           
--    * * *                        
--   *   *   G                     
--  *     * *   *                  
-- E - - - H - - - I               
--  *     * *         *            
--   *   *   *           *         
--    * *     *             *      
--     D-------A---------------B   
--              *                  
--              (C) federgraph.de  
+-     F
+-    * * *
+-   *   *   G
+-  *     * *   *
+- E - - - H - - - I
+-  *     * *         *
+-   *   *   *           *
+-    * *     *             *
+-     D-------A---------------B
+-              *
+-              (C) federgraph.de
 *)
 
 interface
@@ -23,16 +23,22 @@ uses
   IdGlobal,
   IdHttp,
   IdUri,
+  IdSSLOpenSSL,
+  IdSSLOpenSSLHeaders,
   RiggVar.EM.Connection;
 
 type
   THttpCon = class(TEventMenuConnection)
   private
+    ioh: TIdSSLIOHandlerSocketOpenSSL;
     Response_CharSet: string;
     function EnsureCRLF(const Input: string): string;
     function RemovePreamble(const s: string): string;
     function HasUtf8EncodingAttribute(b: TBytes; l: Integer): Boolean;
+    function PrepareOpenSSL(c: TIdHttp): Boolean;
   public
+    UsedSSLVersion: string;
+    destructor Destroy; override;
     function Get: string; override;
     procedure Post(const s: string); override;
   end;
@@ -40,6 +46,16 @@ type
 implementation
 
 { THttpCon }
+
+destructor THttpCon.Destroy;
+begin
+  if ioh <> nil then
+  begin
+    ioh.Free;
+    ioh := nil;
+  end;
+  inherited;
+end;
 
 function THttpCon.Get: string;
 var
@@ -57,6 +73,14 @@ begin
   c := TIdHTTP.Create(nil);
   c.ConnectTimeout := 2000;
   c.ReadTimeout := 5000;
+
+  if not PrepareOpenSSL(c) then
+  begin
+    c.Free;
+    bs.Free;
+    Exit;
+  end;
+
   try
     try
       //result := c.Get(Url); //relies on CharSet in HttpHeader or HttpMetaEquiv
@@ -162,6 +186,30 @@ end;
 function THttpCon.EnsureCRLF(const Input: string): string;
 begin
   result := AdjustLineBreaks(Input, tlbsCRLF);
+end;
+
+function THttpCon.PrepareOpenSSL(c: TIdHttp): Boolean;
+begin
+  if not Url.Contains('https') then
+  begin
+    result := true; //continue, using http, not https
+    Exit;
+  end;
+
+  if ioh = nil then
+  begin
+    ioh := TIdSSLIOHandlerSocketOpenSSL.Create(nil);
+    ioh.SSLOptions.SSLVersions := [sslvTLSv1_2];
+    ioh.SSLOptions.Mode := sslmUnassigned;
+    if UsedSSLVersion = '' then
+    begin
+      //ensures that IdSSLOpenSSL.LoadOpenSSLLibrary is called at least once
+      UsedSSLVersion := IdSSLOpenSSL.OpenSSLVersion;
+    end;
+  end;
+  c.IOHandler := ioh;
+  c.Request.UserAgent := 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:12.0) Gecko/20100101 Firefox/12.0';
+  result := IsOpenSSL_TLSv1_2_Available;
 end;
 
 end.
